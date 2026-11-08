@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pembayaran – StudioGo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="bayar">
+  <div id="hdr"></div>
+  
+  <section style="padding-top:36px">
+    <div class="wrap">
+      <h2>Pembayaran</h2>
+      
+      <div class="steps">
+        <span class="on"><i>1</i>Data &amp; jadwal</span>
+        <span class="on"><i>2</i>Bayar</span>
+        <span><i>3</i>Selesai</span>
+      </div>
+      
+      <div class="split">
+        <div>
+          <div class="timer"><i class="fas fa-clock"></i> Selesaikan pembayaran dalam <span id="timer">09:59</span></div>
+          
+          <div class="acc open">
+            <button><span>QRIS</span><i class="fas fa-chevron-down"></i></button>
+            <div class="in">
+              <div class="qr"><i class="fas fa-qrcode"></i></div>
+              <div><b style="color:var(--ink)">Scan dengan aplikasi bank atau e-wallet</b><br>Kode berlaku selama waktu di atas.</div>
+            </div>
+          </div>
+          
+          <div class="acc">
+            <button><span>Transfer bank / virtual account</span><i class="fas fa-chevron-down"></i></button>
+            <div class="in">
+              <div class="pay">
+                <label><input type="radio" name="b" value="BCA" checked>BCA</label>
+                <label><input type="radio" name="b" value="Mandiri">Mandiri</label>
+                <label><input type="radio" name="b" value="BNI">BNI</label>
+              </div>
+              <div style="width:100%">
+                Nomor VA: <b style="color:var(--ink)" id="va">123-456-7890</b> 
+                <button class="btn ghost" id="copyVa" style="padding:4px 12px;font-size:13px;margin-left:8px">Salin</button><br>
+                <small>a.n. StudioGo Indonesia</small>
+              </div>
+            </div>
+          </div>
+          
+          <div class="acc">
+            <button><span>E-wallet</span><i class="fas fa-chevron-down"></i></button>
+            <div class="in">
+              <div class="pay">
+                <label><input type="radio" name="w" value="GoPay" checked>GoPay</label>
+                <label><input type="radio" name="w" value="OVO">OVO</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <aside class="panel">
+          <h3 class="t">Total tagihan</h3>
+          <div class="row"><span id="pS"></span><b id="pBase"></b></div>
+          <div class="row"><span>Biaya layanan</span><b>Rp 5.000</b></div>
+          <div class="row sum"><span>Total</span><b id="pTotal"></b></div>
+          <button class="btn block" id="paid" style="margin-top:16px">Saya sudah bayar</button>
+        </aside>
+      </div>
+    </div>
+  </section>
+  
+  <div id="ftr"></div>
+  
+  <!-- TAMBAHAN: Library Supabase (WAJIB ADA) -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bantuan – StudioGo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="bantuan">
+  <div id="hdr"></div>
+
+  <section style="padding-top:36px">
+    <div class="wrap">
+      <h2>Bantuan</h2>
+      <p class="sub">Butuh bantuan soal booking, pembayaran, atau studio? Cek jawaban di bawah atau hubungi kami.</p>
+
+      <div class="help-grid">
+        <div class="help-card reveal">
+          <i class="fas fa-comments"></i>
+          <h3>Chat dengan kami</h3>
+          <p>Tim support siap membantu setiap hari, 08.00–22.00 WIB.</p>
+          <a href="#" onclick="toast('Fitur chat akan segera tersedia');return false">Mulai chat →</a>
+        </div>
+        <div class="help-card reveal">
+          <i class="fas fa-envelope"></i>
+          <h3>Email</h3>
+          <p>Kirim detail kendala Anda, kami balas maksimal 1×24 jam.</p>
+          <a href="mailto:halo@studiogo.id">halo@studiogo.id</a>
+        </div>
+        <div class="help-card reveal">
+          <i class="fas fa-phone-alt"></i>
+          <h3>Telepon</h3>
+          <p>Untuk bantuan cepat terkait pembayaran atau pembatalan.</p>
+          <a href="tel:+622112345678">(021) 1234-5678</a>
+        </div>
+      </div>
+
+      <h3 class="t" style="margin-top:36px">Pertanyaan yang sering diajukan</h3>
+      <div class="faq-list">
+        <div class="faq open">
+          <button class="faq-q">Bagaimana cara membatalkan pesanan? <i class="fas fa-chevron-down"></i></button>
+          <div class="faq-a">Buka halaman <b>Pesanan saya</b>, lalu klik tombol <b>Batalkan pesanan</b>. Pembatalan hanya bisa dilakukan sebelum jadwal studio dimulai.</div>
+        </div>
+        <div class="faq">
+          <button class="faq-q">Apakah bisa ganti jadwal? <i class="fas fa-chevron-down"></i></button>
+          <div class="faq-a">Perubahan jadwal dapat dilakukan dengan membatalkan pesanan lama lalu membuat booking baru, selama slot pengganti masih tersedia.</div>
+        </div>
+        <div class="faq">
+          <button class="faq-q">Metode pembayaran apa saja yang didukung? <i class="fas fa-chevron-down"></i></button>
+          <div class="faq-a">Kami mendukung QRIS, transfer bank/virtual account (BCA, Mandiri, BNI), dan e-wallet (GoPay, OVO).</div>
+        </div>
+        <div class="faq">
+          <button class="faq-q">Apakah bukti pembayaran bisa diunduh? <i class="fas fa-chevron-down"></i></button>
+          <div class="faq-a">Bisa. Buka halaman <b>Pesanan saya</b> dan klik <b>Unduh bukti (PDF)</b>.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="ftr"></div>
+  
+  <!-- TAMBAHAN: Library Supabase (WAJIB ADA) -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="script.js"></script>
+</body>
+</html>

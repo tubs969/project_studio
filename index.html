@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cari studio – StudioGo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="home">
+  <div id="hdr"></div>
+  
+  <div class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <h1>Studio musik siap pakai, tinggal datang.</h1>
+        <p>Cari studio berdasarkan lokasi, lihat mana yang masih kosong, lalu pesan.</p>
+        <div class="search">
+          <label><i class="fas fa-map-marker-alt"></i><input id="loc" type="text" placeholder="Lokasi, misal Pajajaran" value="Bogor" aria-label="Lokasi"></label>
+          <button class="btn" id="doSearch">Cari</button>
+        </div>
+      </div>
+      <div class="hero-img" role="img" aria-label="Ruang rekaman studio"></div>
+    </div>
+  </div>
+
+  <section id="studio">
+    <div class="wrap">
+      <h2>Studio di sekitar Anda</h2>
+      <p class="sub">Studio yang sudah dibooking tidak bisa dipilih sampai jamnya kosong lagi.</p>
+
+      <div class="locbar">
+        <div class="areachips" id="areas" role="group" aria-label="Filter area"></div>
+        <div class="locbar-right">
+          <button class="chip" id="nearMe" type="button"><i class="fas fa-crosshairs"></i> Sekitar saya</button>
+          <select id="sortBy" class="sortsel" aria-label="Urutkan studio">
+            <option value="pop">Urutan default</option>
+            <option value="near">Terdekat</option>
+            <option value="cheap">Termurah</option>
+            <option value="rating">Rating tertinggi</option>
+          </select>
+        </div>
+      </div>
+      <p class="result-count" id="count"></p>
+
+      <div class="filters">
+        <button class="chip on" data-f="all">Semua</button>
+        <button class="chip" data-f="ready">Tersedia</button>
+        <button class="chip" data-f="busy">Sudah dibooking</button>
+      </div>
+      
+      <div class="grid3" id="cards"></div>
+      <div class="empty" id="empty">Tidak ada studio yang cocok dengan lokasi atau filter ini. Coba pilih area lain.</div>
+    </div>
+  </section>
+  
+  <div id="ftr"></div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="script.js"></script>
+</body>
+</html>

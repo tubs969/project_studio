@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booking – StudioGo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="booking">
+  <div id="hdr"></div>
+  
+  <div class="wrap crumb"><a href="index.html">Cari studio</a> / Booking</div>
+  
+  <section style="padding-top:24px">
+    <div class="wrap split">
+      <div class="stack">
+        <h2>Jadwal dan data pemesan</h2>
+        <p class="sub">Isi data Anda, lalu pilih tanggal dan jam.</p>
+        
+        <div class="panel">
+          <h3 class="t">Data pemesan</h3>
+          <div class="two">
+            <div class="field"><label for="n">Nama lengkap</label><input id="n" value="Ahmad Fauzi"></div>
+            <div class="field"><label for="e">Email</label><input id="e" type="email" value="ahmad@email.com"></div>
+          </div>
+          <div class="two">
+            <div class="field"><label for="p">No. telepon</label><input id="p" value="081234567890"></div>
+            <div class="field"><label for="c">Catatan (opsional)</label><input id="c" placeholder="Misal: butuh 2 gitar"></div>
+          </div>
+        </div>
+        
+        <div class="panel">
+          <h3 class="t" id="monthYear" style="margin-bottom: 16px;">Memuat...</h3>
+          <div class="days" id="days"><b>Sen</b><b>Sel</b><b>Rab</b><b>Kam</b><b>Jum</b><b>Sab</b><b>Min</b></div>
+          
+          <div class="field" style="margin-top:16px; margin-bottom:16px;">
+            <label for="durasi">Durasi Sewa (Jam)</label>
+            <select id="durasi">
+              <option value="1">1 Jam</option>
+              <option value="2" selected>2 Jam</option>
+              <option value="3">3 Jam</option>
+              <option value="4">4 Jam</option>
+              <option value="5">5 Jam</option>
+              <option value="6">6 Jam</option>
+            </select>
+          </div>
+
+          <div class="slots">
+            <button class="slot" data-t="14:00">Mulai 14:00</button>
+            <button class="slot on" data-t="16:00">Mulai 16:00</button>
+            <button class="slot" data-t="18:00">Mulai 18:00</button>
+            <button class="slot" data-t="20:00">Mulai 20:00</button>
+          </div>
+        </div>
+        
+        <div class="panel">
+          <h3 class="t">Kode voucher</h3>
+          <div class="voucher">
+            <input id="vc" value="STUDIOGO10" aria-label="Kode voucher">
+            <button class="btn ghost" id="applyV">Pakai</button>
+          </div>
+          <div class="msg" id="vmsg">Voucher STUDIOGO10 dipakai: diskon 10%.</div>
+        </div>
+      </div>
+      
+      <!-- HAPUS CLASS sticky DAN margin-top:96px DI SINI -->
+      <aside class="panel">
+        <h3 class="t">Ringkasan</h3>
+        <div class="row"><span>Studio</span><b id="sName"></b></div>
+        <div class="row"><span>Tanggal</span><b id="sDate"></b></div>
+        <div class="row"><span>Jam</span><b id="sTime"></b></div>
+        <div class="row"><span id="sBase"></span><b id="sSub"></b></div>
+        <div class="row"><span>Diskon voucher</span><b id="sDisc"></b></div>
+        <div class="row sum"><span>Total</span><b id="sTotal"></b></div>
+        <button class="btn block" id="next" style="margin-top:16px">Lanjut ke pembayaran</button>
+      </aside>
+    </div>
+  </section>
+  
+  <div id="ftr"></div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="script.js"></script>
+</body>
+</html>

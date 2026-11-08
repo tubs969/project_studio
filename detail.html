@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detail studio – StudioGo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="detail">
+  <div id="hdr"></div>
+  
+  <div class="wrap crumb"><a href="index.html">Cari studio</a> / <span id="bc">Detail studio</span></div>
+  
+  <section style="padding-top:24px">
+    <div class="wrap split">
+      <div>
+        <div class="main-img" id="mainImg"></div>
+        <div class="thumbs" id="thumbs"></div>
+        
+        <h3 class="t">Fasilitas</h3>
+        <ul class="fac">
+          <li><i class="fas fa-snowflake"></i>AC</li>
+          <li><i class="fas fa-volume-up"></i>Sound system Marshall</li>
+          <li><i class="fas fa-drum"></i>Drum set Tama</li>
+          <li><i class="fas fa-microphone-alt"></i>Mikrofon studio</li>
+          <li><i class="fas fa-door-closed"></i>Ruang kedap suara</li>
+          <li><i class="fas fa-coffee"></i>Minuman gratis</li>
+          <li><i class="fas fa-wifi"></i>WiFi</li>
+        </ul>
+        
+        <h3 class="t">Tentang studio</h3>
+        <p style="color:var(--mute);max-width:62ch">Akustik ruangan sudah dirancang untuk rekaman dan latihan band. Kedap suara dan peralatannya dirawat rutin, jadi Anda tinggal bawa instrumen.</p>
+        
+        <h3 class="t" id="lokasi" style="margin-top:28px">Lokasi studio</h3>
+        <div class="mapwrap" id="mapWrap"></div>
+      </div>
+      
+      <!-- CLASS STICKY UDAH DIHAPUS DARI SINI -->
+      <aside class="panel">
+        <h3 id="nm"></h3>
+        <div class="meta"><i class="fas fa-star" style="color:#F2B01E"></i><span id="rt"></span></div>
+        <div class="meta"><i class="fas fa-map-marker-alt"></i><span id="ad"></span></div>
+        <div class="meta"><i class="fas fa-clock"></i><span id="hr"></span><span class="openbadge" id="open"></span></div>
+        
+        <div class="price" id="pr" style="margin:16px 0"></div>
+        <a class="btn block" id="go" style="display:block;text-align:center">Pilih jadwal</a>
+        <a class="btn ghost block" href="#lokasi" style="display:block;text-align:center;margin-top:10px">Lihat lokasi</a>
+        
+        <ul class="rules">
+          <li>Tidak boleh membawa makanan berat</li>
+          <li>Maksimal 6 orang per ruangan</li>
+          <li>Jaga kebersihan ruangan</li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+  
+  <div id="ftr"></div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="script.js"></script>
+</body>
+</html>

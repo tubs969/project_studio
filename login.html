@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Masuk – StudioGo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="login">
+  <div class="auth-page">
+    <div class="auth-side">
+      <a href="beranda.html" class="logo" style="color:#fff"><i class="fas fa-headphones"></i>StudioGo</a>
+      <h1>Pesan studio tanpa chat bolak-balik.</h1>
+    </div>
+    <div class="auth-main">
+      <div class="box">
+        <h2 style="font-size:28px">Selamat datang</h2>
+        <p class="sub" style="margin-bottom:20px">Masuk atau daftar untuk melihat dan memesan studio.</p>
+        
+        <div class="tabs">
+          <button type="button" class="on" data-tab="login">Masuk</button>
+          <button type="button" data-tab="register">Daftar</button>
+        </div>
+        
+        <form id="loginForm" class="auth-form" autocomplete="on" onsubmit="return false">
+          <div class="field"><label for="loginId">Email atau username</label><input id="loginId" placeholder="nama@email.com atau username" required></div>
+          <div class="field"><label for="loginPw">Kata sandi</label><input id="loginPw" type="password" placeholder="Minimal 6 karakter" required></div>
+          <label class="remember"><input type="checkbox" id="rememberMe" checked> Ingat saya di perangkat ini</label>
+          <div class="msg" id="loginMsg" style="min-height:20px"></div>
+          <button type="button" class="btn block" id="authGo">Masuk</button>
+          <p style="text-align:center;margin-top:12px;font-size:13px"><a href="#" style="color:var(--blue)">Lupa kata sandi?</a></p>
+        </form>
+        
+        <form id="regForm" class="auth-form" autocomplete="on" onsubmit="return false" hidden>
+          <div class="field"><label for="regUser">Username</label><input id="regUser" placeholder="misal: ahmadfauzi" required></div>
+          <div class="field"><label for="regName">Nama lengkap</label><input id="regName" placeholder="Ahmad Fauzi" required></div>
+          <div class="field"><label for="regEmail">Email</label><input id="regEmail" type="email" placeholder="nama@email.com" required></div>
+          <div class="field"><label for="regPhone">No. telepon</label><input id="regPhone" placeholder="081234567890" required></div>
+          <div class="field"><label for="regPw">Kata sandi</label><input id="regPw" type="password" placeholder="Minimal 6 karakter" required minlength="6"></div>
+          <div class="field"><label for="regPw2">Konfirmasi kata sandi</label><input id="regPw2" type="password" placeholder="Ketik ulang kata sandi" required minlength="6"></div>
+          <div class="msg" id="regMsg" style="min-height:20px"></div>
+          <button type="button" class="btn block" id="regGo">Buat akun</button>
+          <p style="text-align:center;margin-top:12px;font-size:13px;color:var(--mute)">Dengan mendaftar, Anda menyetujui <a href="#" style="color:var(--blue)">Syarat &amp; Ketentuan</a>.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+  
+  <!-- TAMBAHAN: Library Supabase (WAJIB ADA) -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="script.js"></script>
+</body>
+</html>
